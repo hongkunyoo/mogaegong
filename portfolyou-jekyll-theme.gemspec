@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jemoji", "~> 0.12"
   spec.add_runtime_dependency "kramdown", "~> 2.3.1"
   spec.add_runtime_dependency "kramdown-parser-gfm", "~> 1.1.0"
+  spec.add_runtime_dependency "jekyll-regex-replace", "~> 1.0.0"
 end

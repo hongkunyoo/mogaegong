@@ -1,7 +1,7 @@
 <!-- Simple-Jekyll-Search https://github.com/christian-fei/Simple-Jekyll-Search -->
 
 <div class="input-group mt-5 px-3">
-  <input id="search-input" type="text" class="form-control search-box" placeholder="Search posts..">
+  <input id="search-input" type="text" class="form-control search-box" placeholder="공고 검색.">
   <div class="input-group-append">
     <span class="input-group-text border border-primary bg-primary text-white">
       <i class="fas fa-search"></i>
@@ -18,8 +18,16 @@
   var sjs = SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
-        searchResultTemplate: '<a href="{url}" class="list-group-item list-group-item-action">{title}</a>',
+        searchResultTemplate: '<a href="{url}" class="list-group-item list-group-item-action" target="_blank" value="{post_id}">{title}</a>',
         noResultsText: '<li class="list-group-item list-group-item-action disabled">No results found</li>',
         json: '{{ '/search.json' | relative_url }}'
+        // templateMiddleware: function(prop, value, template) {
+        
+        //   if (prop == "post_id") {
+        //     console.log(value, "unloaded")
+        //     // $( "#" + value ).addClass( "unloaded" );
+
+        //   }
+        // }
       })
 </script>
